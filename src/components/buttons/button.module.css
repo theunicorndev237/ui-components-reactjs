@@ -1,0 +1,68 @@
+.btn {
+  padding: 0.8rem 1rem;
+  border: 3px solid var(--main-color);
+  font-size: 1.8rem;
+  outline: none;
+  cursor: pointer;
+  width: fit-content;
+  white-space: nowrap;
+  background: transparent;
+}
+
+.btn[aria-label="primary"] {
+  background: var(--main-color);
+  color: #fff;
+}
+
+.btn[aria-label="secondary"] {
+  background: transparent;
+  color: #fff;
+  color: var(--main-color);
+}
+
+.btn[aria-label="outlined"] {
+  border-width: 1px;
+  color: var(--main-color);
+}
+
+.btn[aria-label="animated"] {
+  background: var(--secondary-color);
+  color: #fff;
+  border-color: var(--secondary-color);
+  transform: translateY(0);
+}
+
+.btn[aria-label="animated"]:hover,
+.btn[aria-label="animated"]:focus-within {
+  animation: move 0.2s linear infinite;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+.btn[aria-label="rounded"] {
+  border-radius: 35px;
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+}
+
+.btn[aria-label="shadowed"],
+.btn[aria-label="hover"] {
+  border-radius: 3px;
+  background: var(--main-color);
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.btn[aria-label="hover"]:hover,
+.btn[aria-label="hover"]:focus-within {
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  -webkit-box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}

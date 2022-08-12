@@ -49,6 +49,7 @@
   transition: 0.2s ease-in-out;
   position: relative;
   -webkit-transition: 0.2s ease-in-out;
+  outline: none;
 }
 
 .navbar__menu li a::before {

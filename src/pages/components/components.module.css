@@ -1,14 +1,72 @@
 .components {
-    min-height: 100vh;
-    width: 100%;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.grid__layout {
+  display: grid;
+  display: -ms-grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
 }
 
 .hero {
-    padding: 2rem 4vw;
+  padding: 2rem 4vw;
 }
 
 .hero h2 {
-    font-size: 7rem;
-    color: var(--gray-color);
-    margin-top: 7rem;
+  font-size: 5rem;
+  color: var(--gray-color);
+  margin-top: 8.5rem;
+  font-weight: 500;
+}
+
+.tabs {
+  padding: 2rem;
+  position: relative;
+  background: #f3f3f3;
+  width: 100%;
+  left: 4vw;
+  border-radius: 10px;
+  padding-bottom: 6rem;
+}
+
+.tabs h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.headline h2 {
+  font-size: 16px;
+  padding: 0.8rem;
+  border-radius: 3px;
+  background: var(--gray-color);
+  color: #fff;
+  width: fit-content;
+  margin-bottom: 2rem;
+}
+
+.btn__component {
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  gap: 1rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.links {
+  margin-top: 5rem;
+  position: absolute;
+  bottom: 20px;
+}
+
+.links a {
+  border-radius: 3px;
+  color: var(--secondary-color);
+  font-size: 1.8rem;
+  text-decoration: underline;
 }
