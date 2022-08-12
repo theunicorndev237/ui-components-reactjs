@@ -2,12 +2,9 @@
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import {
-  FaHome,
-  FaHeart,
-  FaSpinner,
-  FaCreativeCommonsPd,
-  FaBars,
+  FaHome, FaHeart, FaSpinner, FaBars, FaStar,
 } from "react-icons/fa";
+import { TbComponents } from "react-icons/tb";
 
 // stylesheet
 import styles from "./globals.module.css";
@@ -22,31 +19,56 @@ export const Navbar: React.FC = () => {
         role="navigation"
       >
         <div className={styles.navbar__logo}>
-          <h4>React UI Toolkit</h4>
+          <Link to="/">
+            <h4>React UI Toolkit</h4>
+          </Link>
         </div>
         <ul
           className={`${styles.navbar__menu} ${styles.flex} ${
             isMobileNavActive ? styles.show : ""
           }`}
         >
-          <li className={`${styles.flex} ${styles.a_j__center}`}>
+          <li
+            className={`${styles.flex} ${styles.a_j__center} ${
+              window.location.pathname === "/" ? styles.active : ""
+            }`}
+          >
             <Link to="/">
               <FaHome size={18} />
               Home
             </Link>
           </li>
-          <li className={`${styles.flex} ${styles.a_j__center}`}>
-            <Link to="/">
+          <li
+            className={`${styles.flex} ${styles.a_j__center} ${
+              window.location.pathname === "/templates" ? styles.active : ""
+            }`}
+          >
+            <Link to="/templates">
               <FaSpinner size={18} />
-              About
+              Templates
             </Link>
           </li>
-          <li className={`${styles.flex} ${styles.a_j__center}`}>
-            <Link to="/">
-              <FaCreativeCommonsPd size={18} />
+          <li
+            className={`${styles.flex} ${styles.a_j__center} ${
+              window.location.pathname === "/components" ? styles.active : ""
+            }`}
+          >
+            <Link to="/components">
+              <TbComponents size={18} />
               Components
             </Link>
           </li>
+          <li
+            className={`${styles.flex} ${styles.a_j__center} ${
+              window.location.pathname === "/components" ? styles.active : ""
+            }`}
+          >
+            <Link to="/components">
+              <FaStar size={18} />
+              Premium
+            </Link>
+          </li>
+          ;
         </ul>
 
         <div className={styles.navbar__menu__toggler}>

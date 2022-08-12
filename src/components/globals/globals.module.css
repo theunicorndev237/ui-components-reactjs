@@ -33,27 +33,48 @@
   font-weight: 500;
 }
 
+.navbar__menu {
+  gap: 3rem;
+}
+
 .navbar__menu li a {
   display: flex;
   display: -ms-flexbox;
   align-items: center;
-  padding: 0.8rem 2rem;
-  border-radius: 35px;
+  padding: 0.8rem 0;
+  border-radius: 3px;
   font-size: 1.85rem;
   color: rgb(27, 27, 27);
   font-weight: 500;
+  transition: 0.2s ease-in-out;
+  position: relative;
+  -webkit-transition: 0.2s ease-in-out;
+}
+
+.navbar__menu li a::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  width: 50%;
+  height: 3px;
+  background: rgb(50, 50, 50);
+  border-radius: 35px;
+  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
   transition: 0.2s ease-in-out;
   -webkit-transition: 0.2s ease-in-out;
 }
 
 .navbar__menu li a svg {
-  margin-right: 0.7rem;
+  margin-right: 1rem;
 }
 
-.navbar__menu li a:hover,
-.navbar__menu li:focus-within {
-  background: rgb(27, 27, 27);
-  color: #fff;
+.navbar__menu li a:hover::before,
+.navbar__menu li a:focus-within::before,
+.navbar__menu li.active a::before {
+  transform: scaleX(1);
+  -webkit-transform: scaleX(1);
 }
 
 .navbar__menu__toggler {
@@ -65,7 +86,7 @@
 .footer__details {
   align-items: center;
   justify-content: space-between;
-  padding: 3rem 4vw;
+  padding: 2rem 4vw;
   background: rgb(27, 27, 27);
   gap: 1rem;
   flex-wrap: wrap;
