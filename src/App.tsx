@@ -1,12 +1,10 @@
 import React from "react";
-import AppLayout from "./hoc/AppLayout";
+
+// app routes
+import AppRoutes from "./routes/AppRoutes";
 
 const App: React.FC = () => {
-  return (
-    <AppLayout>
-      <h1>App Component</h1>
-    </AppLayout>
-  );
+  return <AppRoutes />;
 };
 
 export default App;
