@@ -1,16 +1,20 @@
 // external packages
 import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import {
   FaHome,
   FaHeart,
   FaSpinner,
   FaCreativeCommonsPd,
+  FaBars,
 } from "react-icons/fa";
 
 // stylesheet
 import styles from "./globals.module.css";
 
-export const Navbar = () => {
+export const Navbar: React.FC = () => {
+  const [isMobileNavActive, setIsMobileNavActive] = useState(false);
+
   return (
     <header>
       <nav
@@ -20,7 +24,11 @@ export const Navbar = () => {
         <div className={styles.navbar__logo}>
           <h4>React UI Toolkit</h4>
         </div>
-        <ul className={`${styles.navbar__menu} ${styles.flex}`}>
+        <ul
+          className={`${styles.navbar__menu} ${styles.flex} ${
+            isMobileNavActive ? styles.show : ""
+          }`}
+        >
           <li className={`${styles.flex} ${styles.a_j__center}`}>
             <Link to="/">
               <FaHome size={18} />
@@ -40,6 +48,14 @@ export const Navbar = () => {
             </Link>
           </li>
         </ul>
+
+        <div className={styles.navbar__menu__toggler}>
+          <FaBars
+            onClick={() => setIsMobileNavActive(!isMobileNavActive)}
+            style={{ cursor: "pointer" }}
+            size={25}
+          />
+        </div>
       </nav>
     </header>
   );
