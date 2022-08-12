@@ -61,15 +61,20 @@ export const Navbar: React.FC = () => {
   );
 };
 
-export const Footer = () => {
-  return (
-    <footer className={styles.footer}>
-      <div className={`${styles.footer__details} ${styles.flex}`}>
-        <h4>Copyright &copy; {new Date().getFullYear()}</h4>
-        <h4>
-          Made with <FaHeart size={18} color="#ff4500" /> from Cameroon
-        </h4>
-      </div>
-    </footer>
-  );
-};
+export const Footer: React.FC = () => (
+  <footer className={styles.footer}>
+    <div className={`${styles.footer__details} ${styles.flex}`}>
+      <h4>
+        Copyright &copy;
+        {new Date().getFullYear()}
+      </h4>
+      <h4>
+        Made with
+        {' '}
+        <FaHeart size={18} color="#ff4500" />
+        {' '}
+        from Cameroon
+      </h4>
+    </div>
+  </footer>
+);

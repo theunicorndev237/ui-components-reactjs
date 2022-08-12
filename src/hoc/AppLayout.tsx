@@ -7,14 +7,12 @@ type Props = {
   children: ReactNode;
 };
 
-const AppLayout: React.FC<Props> = ({ children }) => {
-  return (
-    <Fragment>
-      <Navbar />
-      {children}
-      <Footer />
-    </Fragment>
-  );
-};
+const AppLayout: React.FC<Props> = ({ children }) => (
+  <>
+    <Navbar />
+    {children}
+    <Footer />
+  </>
+);
 
 export default AppLayout;
