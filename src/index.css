@@ -1,0 +1,90 @@
+/** GLOBAL FONT FAMILY *******************************************************/
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font-family: "Fredoka", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+/** COLOR PALETTES | GLOBAL VARIABLES ******************************************/
+/* :root {
+  --bg-color: #fff;
+  --text-color: #383e42;
+} */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  /*   overflow-x: hidden; */
+}
+
+/** Remove bullets from list elements *******************************************/
+ul,
+ol,
+menu {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/** Reapply the pointer cursor for anchor tags ***********************************/
+a,
+button {
+  cursor: revert;
+}
+
+/** Controls images display, so they do not exceed their wrapping element's size **/
+img,
+picture {
+  max-width: 100%;
+}
+
+/** INPUT FIELD FOCUS *************************************************************/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 0px 1000px #fff inset;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
+
+/* Removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Remove all animations, transitions and smooth scroll ****************************/
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
