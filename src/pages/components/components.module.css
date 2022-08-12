@@ -1,0 +1,14 @@
+.components {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.hero {
+    padding: 2rem 4vw;
+}
+
+.hero h2 {
+    font-size: 7rem;
+    color: var(--gray-color);
+    margin-top: 7rem;
+}
