@@ -74,7 +74,7 @@ const ComponentsPage = (): JSX.Element => (
           <a
             rel="noreferrer"
             target="_blank"
-            href="https://gist.github.com/theunicorndev237/8da6e0a72b0db0c2e4ddb6f22af09ac9"
+            href="https://gist.github.com/theunicorndev237/53a733409d904ad75e93ab41e3e73cb0"
           >
             View Source Code
           </a>
