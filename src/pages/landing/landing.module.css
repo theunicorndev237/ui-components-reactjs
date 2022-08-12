@@ -1,0 +1,87 @@
+.flex {
+  display: flex;
+  display: -ms-flexbox;
+}
+
+.a_j__center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex__column {
+  flex-direction: column;
+  -ms-flex-direction: column;
+}
+
+/** HERO SECTION ***********/
+
+.hero__section {
+  width: 100%;
+  min-height: 90vh;
+  padding: 2rem 4vw;
+}
+
+.hero__section h1,
+.hero__section h2 {
+  text-align: center;
+}
+
+.hero__section h1 {
+  font-size: 7rem;
+  width: 900px;
+  line-height: 1;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  color: rgb(21, 21, 21);
+}
+
+.hero__section h2 {
+  font-size: 3rem;
+  color: rgb(74, 74, 74);
+}
+
+.hero__section button {
+  padding: 1.3rem 2rem;
+  border-radius: 3px;
+  background: orangered;
+  color: #fff;
+  font-size: 1.8rem;
+  border: none;
+  margin-top: 4rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 950px) {
+  .hero__section h1 {
+    width: 100%;
+    font-size: 6.5rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .hero__section h1 {
+    font-size: 6rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .hero__section h1 {
+    font-size: 5rem;
+  }
+  .hero__section h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .hero__section h1 {
+    font-size: 4rem;
+  }
+  .hero__section h2 {
+    font-size: 2rem;
+  }
+  .hero__section button {
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+  }
+}
