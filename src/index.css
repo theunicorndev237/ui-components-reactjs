@@ -16,10 +16,11 @@
 }
 
 /** COLOR PALETTES | GLOBAL VARIABLES ******************************************/
-/* :root {
-  --bg-color: #fff;
-  --text-color: #383e42;
-} */
+:root {
+  --main-color: rgba(255, 111, 0, 1);
+  --secondary-color: #0000ff;
+  --gray-color: rgb(27, 27, 27);
+}
 
 html {
   scroll-behavior: smooth;

@@ -1,10 +1,9 @@
 // external packages
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
-import {
-  FaHome, FaHeart, FaSpinner, FaBars, FaStar,
-} from "react-icons/fa";
+import { FaHome, FaHeart, FaSpinner, FaBars, FaStar } from "react-icons/fa";
 import { TbComponents } from "react-icons/tb";
+import { BsFillPeopleFill } from "react-icons/bs";
 
 // stylesheet
 import styles from "./globals.module.css";
@@ -60,15 +59,27 @@ export const Navbar: React.FC = () => {
           </li>
           <li
             className={`${styles.flex} ${styles.a_j__center} ${
-              window.location.pathname === "/components" ? styles.active : ""
+              window.location.pathname === "/premium-access"
+                ? styles.active
+                : ""
             }`}
           >
-            <Link to="/components">
+            <Link to="/premium-access">
               <FaStar size={18} />
               Premium
             </Link>
           </li>
-          ;
+          <li
+            className={`${styles.flex} ${styles.a_j__center} ${
+              window.location.pathname === "/contributors" ? styles.active : ""
+            }`}
+          >
+            <Link to="/contributors">
+              <BsFillPeopleFill size={18} />
+              Contributors
+            </Link>
+          </li>
+          ; ;
         </ul>
 
         <div className={styles.navbar__menu__toggler}>
@@ -91,11 +102,7 @@ export const Footer: React.FC = () => (
         {new Date().getFullYear()}
       </h4>
       <h4>
-        Made with
-        {' '}
-        <FaHeart size={18} color="#ff4500" />
-        {' '}
-        from Cameroon
+        Made with <FaHeart size={18} color="#ff4500" /> from Cameroon
       </h4>
     </div>
   </footer>

@@ -7,3 +7,4 @@ public
 README.md
 *.css
 *.svg
+reportWebVitals.ts
