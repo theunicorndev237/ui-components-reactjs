@@ -5,7 +5,6 @@
   outline: none;
   cursor: pointer;
   width: fit-content;
-  white-space: nowrap;
   background: transparent;
 }
 
@@ -59,6 +58,8 @@
   color: #fff;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
 }
 
 .btn[aria-label="hover"]:hover,

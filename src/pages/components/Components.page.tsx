@@ -26,17 +26,17 @@ const ComponentsPage = (): JSX.Element => (
         <div>
           <Tabs>
             <Tab title="Tab One">
-              <div>
+              <div className={styles.content}>
                 <h2>Hello Tab One</h2>
               </div>
             </Tab>
             <Tab title="Tab Two">
-              <div>
+              <div className={styles.content}>
                 <h2>Hello Tab Two</h2>
               </div>
             </Tab>
             <Tab title="Tab Three">
-              <div>
+              <div className={styles.content}>
                 <h2>Hello Tab Three</h2>
               </div>
             </Tab>

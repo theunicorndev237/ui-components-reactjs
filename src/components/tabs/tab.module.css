@@ -1,6 +1,7 @@
 .tab__head__list {
   display: flex;
   flex-direction: row;
+  -ms-flex-direction: row;
   align-items: center;
   padding: 0;
   margin-top: 0;
@@ -8,6 +9,7 @@
   border-radius: 50px;
   overflow-x: auto;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  width: fit-content;
 }
 
 .tab__head__list li button {
@@ -32,4 +34,23 @@
   outline: none;
   border-color: transparent;
   color: #fff;
+}
+
+@media screen and (max-width: 445px) {
+  .tab__head__list li button {
+    width: 100%;
+  }
+  .tab__head__list {
+    flex-direction: column;
+    -ms-flex-direction: column;
+    width: 100%;
+    border-radius: 0;
+  }
+  .tab__head__list li {
+    width: 100%;
+  }
+  .tab__head__list li:not(:last-of-type) button {
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
 }

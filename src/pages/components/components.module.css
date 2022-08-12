@@ -6,7 +6,7 @@
 .grid__layout {
   display: grid;
   display: -ms-grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
   padding: 0 4vw;
   padding-bottom: 5rem;
@@ -21,6 +21,7 @@
   color: var(--gray-color);
   margin-top: 8.5rem;
   font-weight: 500;
+  line-height: 1;
 }
 
 .tabs {
@@ -53,7 +54,7 @@
   align-items: center;
   flex-wrap: wrap;
   -ms-flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
   background: #fff;
   padding: 1rem;
   border-radius: 10px;
@@ -72,14 +73,21 @@
   text-decoration: underline;
 }
 
-@media screen and (max-width: 900px) {
-  .grid__layout {
-    grid-template-columns: 1fr 1fr;
-  }
+.content h2 {
+  font-size: 18px;
 }
 
 @media screen and (max-width: 750px) {
   .grid__layout {
     grid-template-columns: 1fr;
+  }
+  .hero h2 {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hero h2 {
+    font-size: 3rem;
   }
 }
