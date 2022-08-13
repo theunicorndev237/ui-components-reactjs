@@ -19,6 +19,7 @@
   width: 100%;
   min-height: 90vh;
   padding: 2rem 4vw;
+  position: relative;
 }
 
 .hero__section h1,
@@ -27,7 +28,7 @@
 }
 
 .hero__section h1 {
-  font-size: 7rem;
+  font-size: 9rem;
   width: 900px;
   line-height: 1;
   margin-bottom: 2rem;
@@ -42,13 +43,12 @@
 }
 
 .hero__section button {
-  padding: 1.3rem 2rem;
+  padding: 1.5rem 2rem;
   border-radius: 3px;
   background: var(--main-color);
   color: #fff;
   font-size: 1.8rem;
   border: none;
-  margin-top: 4rem;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
@@ -66,6 +66,7 @@
   gap: 1rem;
   flex-wrap: wrap;
   -ms-flex-wrap: wrap;
+  padding-top: 5rem;
 }
 
 .btn__group a:nth-child(2) button {
@@ -78,6 +79,16 @@
 
 .section {
   padding: 3rem 4vw;
+  min-height: 70vh;
+}
+
+.section .head {
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  -ms-flex-direction: column;
 }
 
 .section .head h2 {
@@ -85,6 +96,13 @@
   font-weight: 500;
   color: #fff;
   text-align: center;
+}
+
+.section .head h4 {
+  font-size: 2.5rem;
+  margin: 2rem 0;
+  width: 700px;
+  margin-bottom: 0;
 }
 
 .info {
@@ -101,16 +119,145 @@
   border-top-right-radius: 70px;
 }
 
+.info.rotated {
+  background: #fff;
+}
+
+.cards {
+  display: grid;
+  display: -ms-grid;
+  grid-template-columns: 1fr 600px;
+  padding: 4rem 0;
+  gap: 2rem;
+}
+
+.cards img {
+  width: 600px;
+  height: 400px;
+}
+
+.cards h2 {
+  font-size: 6rem;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.cards p {
+  color: #f2f2f2;
+  font-size: 2rem;
+  margin-top: 2rem;
+  line-height: 1.3;
+}
+
+.cards button {
+  margin-top: 5rem;
+  border: none;
+  cursor: pointer;
+  padding: 1.5rem 2rem;
+  border-radius: 3px;
+  font-size: 1.8rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+}
+
+.cards button:hover,
+.cards button:focus-within {
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  -webkit-box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.cards .text__content {
+  justify-content: center;
+}
+
+.text__content.rotated h2 {
+  color: var(--gray-color);
+}
+
+.text__content.rotated p {
+  color: var(--gray-color);
+}
+
+.text__content.rotated button {
+  background: var(--main-color);
+  color: #fff;
+}
+
+.form {
+  padding: 1rem;
+  width: 600px;
+  margin-top: 4rem;
+}
+
+.form div {
+  width: 100%;
+}
+
+.form input {
+  padding: 1.3rem 1rem;
+  font-size: 2rem;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  outline: none;
+  transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+}
+
+.form input:focus,
+.form input:focus-within {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.form button {
+  padding: 1.3rem 2rem;
+  font-size: 2rem;
+  border: 1px solid var(--main-color);
+  background: transparent;
+  color: var(--main-color);
+  border-radius: 3px;
+  margin-top: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+}
+
+.form button:hover,
+.form button:focus-within {
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  -webkit-box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
 @media screen and (max-width: 950px) {
   .hero__section h1 {
     width: 100%;
     font-size: 6.5rem;
+  }
+  .cards h2 {
+    font-size: 5.5rem;
+  }
+  .cards {
+    display: flex;
+    display: -ms-flexbox;
+    flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
   }
 }
 
 @media screen and (max-width: 750px) {
   .hero__section h1 {
     font-size: 6rem;
+  }
+  .cards h2 {
+    font-size: 5rem;
+  }
+  .section .head h4 {
+    width: 100%;
   }
 }
 
@@ -119,14 +266,26 @@
   .section .head h2 {
     font-size: 5rem;
   }
+  .cards h2 {
+    font-size: 4.5rem;
+  }
   .hero__section h2 {
     font-size: 2.5rem;
+  }
+  .cards p {
+    font-size: 1.5rem;
+  }
+  .cards img,
+  .form {
+    width: 100%;
+    height: 100%;
   }
 }
 
 @media screen and (max-width: 550px) {
   .hero__section h1,
-  .section .head h2 {
+  .section .head h2,
+  .cards h2 {
     font-size: 4rem;
   }
   .hero__section h2 {

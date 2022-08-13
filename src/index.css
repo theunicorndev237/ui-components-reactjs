@@ -12,7 +12,7 @@
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   font-weight: normal;
-  line-height: 1.5;
+  line-height: 1;
 }
 
 /** COLOR PALETTES | GLOBAL VARIABLES ******************************************/
@@ -29,7 +29,7 @@ html {
 
 body {
   width: 100%;
-  /*   overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 /** Remove bullets from list elements *******************************************/
