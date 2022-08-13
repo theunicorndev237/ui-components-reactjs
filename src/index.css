@@ -1,5 +1,6 @@
 /** GLOBAL FONT FAMILY *******************************************************/
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 *,
 *::before,
@@ -29,7 +30,7 @@ html {
 
 body {
   width: 100%;
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 /** Remove bullets from list elements *******************************************/
