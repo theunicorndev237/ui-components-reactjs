@@ -206,13 +206,13 @@
 }
 
 .animated__layout > div {
-  padding: 2rem;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   min-height: 40vh;
   border-radius: 20px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  padding: 0 1rem;
 }
 
 .animated__layout > div h5 {
@@ -231,7 +231,7 @@
 
 .animated__layout > div img,
 .selected__content img {
-  height: 300px;
+  height: 320px;
   width: 100%;
   object-fit: cover;
   -o-object-fit: cover;
@@ -241,12 +241,13 @@
 
 .selected__content img {
   height: 400px !important;
+  margin-top: 0;
 }
 
 .selected__content {
   position: absolute;
   width: 700px;
-  height: 500px;
+  height: 422px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);

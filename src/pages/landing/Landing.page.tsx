@@ -132,7 +132,7 @@ const LandingPage: React.FC = () => {
         </div>
 
         <div
-          className={`${styles.flex} ${styles.animated__layout} ${styles.a_j__center} ${styles.flex__column}`}
+          className={`${styles.animated__layout}`}
         >
           {homeData
             && homeData.map((data, index) => (
@@ -141,14 +141,14 @@ const LandingPage: React.FC = () => {
                 layoutId={`${index + 1}`}
                 onClick={() => setSelectedId(index + 1)}
               >
-                <motion.h5>{data.title}</motion.h5>
-                {/* <motion.h2>{data.description}</motion.h2> */}
                 <img
                   width="100%"
                   height="100%"
                   src={`/images/img-${index + 1}.jpg`}
                   alt={data.title}
                 />
+                <motion.h5>{data.title}</motion.h5>
+                {/* <motion.h2>{data.description}</motion.h2> */}
               </motion.div>
             ))}
           <div
@@ -158,7 +158,7 @@ const LandingPage: React.FC = () => {
             <AnimatePresence>
               {selectedId !== 0 && (
                 <motion.div layoutId={`${selectedId}`}>
-                  <motion.h5>{homeData[selectedId - 1].title}</motion.h5>
+                  {/* <motion.h5>{homeData[selectedId - 1].title}</motion.h5> */}
                   {/* <motion.h2>{homeData[selectedId - 1].description}</motion.h2> */}
                   <img
                     src={`/images/img-${selectedId}.jpg`}
@@ -167,7 +167,7 @@ const LandingPage: React.FC = () => {
                     height="100%"
                   />
                   <motion.button onClick={() => setSelectedId(0)}>
-                    <FaTimesCircle size={30} />
+                    <FaTimesCircle size={40} color="#fff" />
                   </motion.button>
                 </motion.div>
               )}
