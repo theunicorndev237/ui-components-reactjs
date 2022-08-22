@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  FaGithub, FaEye, FaSpinner, FaTimesCircle,
-} from "react-icons/fa";
+import { FaGithub, FaEye, FaSpinner, FaTimesCircle } from "react-icons/fa";
 import { GiEnvelope } from "react-icons/gi";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -131,11 +129,9 @@ const LandingPage: React.FC = () => {
           </h4>
         </div>
 
-        <div
-          className={`${styles.animated__layout}`}
-        >
-          {homeData
-            && homeData.map((data, index) => (
+        <div className={`${styles.animated__layout}`}>
+          {homeData &&
+            homeData.map((data, index) => (
               <motion.div
                 key={data.title}
                 layoutId={`${index + 1}`}
